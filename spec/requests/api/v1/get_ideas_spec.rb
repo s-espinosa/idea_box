@@ -7,7 +7,7 @@ RSpec.describe "GET /api/v1/ideas" do
     get '/api/v1/ideas'
 
     expect(json_body.count).to eq(2)
-    expect(json_body.first['title']).to eq("Title1")
+    expect(json_body.first['title']).to eq(idea1["title"])
     expect(json_body.first['quality']).to eq("swill")
   end
 end

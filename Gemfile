@@ -37,6 +37,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.4'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'pry-rails'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :development do
@@ -44,3 +46,6 @@ group :development do
   gem 'web-console', '~> 2.0'
 end
 
+group :test do
+  gem 'database_cleaner'
+end
