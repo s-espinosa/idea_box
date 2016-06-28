@@ -17,6 +17,13 @@ class Api::V1::IdeasController < Api::ApiController
     end
   end
 
+  def update
+    @idea = Idea.find(params[:id])
+    if @idea.update(idea_params)
+      respond_with(@idea)
+    end
+  end
+
   private
   def idea_params
     params.permit(:title, :body, :quality)
