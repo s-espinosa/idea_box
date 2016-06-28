@@ -1,17 +1,23 @@
 function getIdeas(callback) {
-  console.log("Callback: " + callback);
   $.ajax({
     url: 'api/v1/ideas',
     success: callback
   })
 }
 
-function firePost(params) {
+function postIdea(params) {
   $.ajax({
     url: 'api/v1/ideas',
     type: 'POST',
     data: params,
-    success: addIdea(params)
+    success: addIdea
   })
 }
 
+function deleteIdea(id) {
+  $.ajax({
+    url: "api/v1/ideas/" + id,
+    type: 'DELETE',
+    success: removeIdea(id)
+  })
+}
