@@ -10,6 +10,13 @@ class Api::V1::IdeasController < Api::ApiController
     end
   end
 
+  def destroy
+    @idea = Idea.find(params[:id])
+    if @idea.delete
+      respond_with(:api, :v1, @idea, :location => nil)
+    end
+  end
+
   private
   def idea_params
     params.permit(:title, :body, :quality)
