@@ -7,7 +7,23 @@ function formatIdeas(ideas) {
   formatted = "";
   ideas = ideas.reverse();
   for (var i = 0; i < ideas.length; i++) {
-    formatted += "<div id='idea-" + ideas[i].id + "'><p>" + ideas[i].title + "<br>" + ideas[i].body + "<br>" + ideas[i].quality + "</p>" + "<div class='delete-button' id='delete-" + ideas[i].id  + "'>delete</div>" + "</div>";
+    var id      = ideas[i].id;
+    var title   = ideas[i].title;
+    var body    = ideas[i].body;
+    var quality = ideas[i].quality;
+
+    formatted +=
+      "<div id='idea-" + id + "'>" +
+
+        "<div id='title-"+ id +"'>" + title + "</div>" +
+        "<div id='body-"+ id +"'>" + body + "</div>" +
+        "<div id='quality-"+ id +"'>" + quality + "</div>" +
+
+        "<div class='delete-button' id='delete-" + id  + "'>delete</div>" +
+        "<div class='upgrade-button' id='upgrade-" + id  + "'>thumbs up</div>" +
+        "<div class='downgrade-button' id='downgrade-" + id  + "'>thumbs down</div>" +
+
+      "</div>";
   }
   return formatted;
 }

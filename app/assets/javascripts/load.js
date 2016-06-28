@@ -15,4 +15,6 @@ function getIdeas() {
 function setButtons() {
   createButton();
   deleteButtons();
+  upgradeButtons();
+  downgradeButtons();
 }
