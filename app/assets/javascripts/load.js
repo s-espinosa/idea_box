@@ -19,6 +19,7 @@ function setButtons() {
   deleteButtons();
   upgradeButtons();
   downgradeButtons();
+  newButton();
 }
 
 function setInputs() {
