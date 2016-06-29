@@ -1,6 +1,7 @@
 $(document).ready(function() {
   getIdeas();
   setButtons();
+  setInputs();
 });
 
 
@@ -17,4 +18,9 @@ function setButtons() {
   deleteButtons();
   upgradeButtons();
   downgradeButtons();
+}
+
+function setInputs() {
+  titleInputs();
+  bodyInputs();
 }

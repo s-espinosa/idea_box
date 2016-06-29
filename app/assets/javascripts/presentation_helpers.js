@@ -15,8 +15,8 @@ function formatIdeas(ideas) {
     formatted +=
       "<div id='idea-" + id + "'>" +
 
-        "<div id='title-"+ id +"'>" + title + "</div>" +
-        "<div id='body-"+ id +"'>" + body + "</div>" +
+        "<div class='title-input' id='title-"+ id +"'>" + title + "</div>" +
+        "<div class='body-input' id='body-"+ id +"'>" + body + "</div>" +
         "<div id='quality-"+ id +"'>" + quality + "</div>" +
 
         "<div class='delete-button' id='delete-" + id  + "'>delete</div>" +
