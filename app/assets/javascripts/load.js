@@ -2,6 +2,7 @@ $(document).ready(function() {
   getIdeas();
   setButtons();
   setInputs();
+  searchIdeas();
 });
 
 

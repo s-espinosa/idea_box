@@ -13,7 +13,7 @@ function formatIdeas(ideas) {
     var quality = ideas[i].quality;
 
     formatted +=
-      "<div id='idea-" + id + "'>" +
+      "<div class='idea' id='idea-" + id + "'>" +
 
         "<div class='title-input' id='title-"+ id +"'>" + title + "</div>" +
         "<div class='body-input' id='body-"+ id +"'>" + body + "</div>" +
