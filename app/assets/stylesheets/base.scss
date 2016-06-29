@@ -1,20 +1,53 @@
+$base: #084c61; //rgba(8, 76, 97, 100)
+$warning: #db504a; //rgba(219, 80, 74, 100)
+$highlight: #e3b505; //rgba(227, 181, 5, 100)
+$muted: #4f6d7a; //rgba(79, 109, 122, 100)
+$success: #56a3a6; //rgba(86, 163, 166, 100)
+
+$hind: 'Hind Madurai', sans-serif;
+
+body {
+  color: white;
+  background-color: $base;
+  padding: 0;
+  margin: 0;
+  font-family: $hind;
+  font-size: 2em;
+}
+
+nav {
+  background-color: $muted;
+}
+
+input {
+  font-size: 1em;
+}
+
+#idea-submit {
+  color: white;
+  background-color: $success;
+  outline: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
 .delete-button {
   color: white;
-  background-color: red;
+  background-color: $warning;
   padding: 10px;
   cursor: pointer;
 }
 
 .upgrade-button {
   color: white;
-  background-color: green;
+  background-color: $success;
   padding: 10px;
   cursor: pointer;
 }
 
 .downgrade-button {
   color: white;
-  background-color: red;
+  background-color: $warning;
   padding: 10px;
   cursor: pointer;
 }
