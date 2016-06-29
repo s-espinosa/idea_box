@@ -1,6 +1,6 @@
 class Api::V1::IdeasController < Api::ApiController
   def index
-    respond_with Idea.all
+    respond_with Idea.all.order(:id)
   end
 
   def create
