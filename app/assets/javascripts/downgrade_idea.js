@@ -25,6 +25,10 @@ function patchIdea(id, params) {
 
 function downgradeIdeaOnPage(id, params) {
   $(qualitySelector(id)).text(params.quality);
+  $(qualitySelector(id)).removeClass('plausible');
+  $(qualitySelector(id)).removeClass('swill');
+  $(qualitySelector(id)).removeClass('genius');
+  $(qualitySelector(id)).addClass(params.quality);
 }
 
 function qualitySelector(id) {

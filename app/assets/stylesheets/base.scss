@@ -1,8 +1,11 @@
-$base: #084c61; //rgba(8, 76, 97, 100)
+$muted: #084c61; //rgba(8, 76, 97, 100)
 $warning: #db504a; //rgba(219, 80, 74, 100)
 $highlight: #e3b505; //rgba(227, 181, 5, 100)
-$muted: #4f6d7a; //rgba(79, 109, 122, 100)
+$base: rgba(8, 76, 97, 0.80);
 $success: #56a3a6; //rgba(86, 163, 166, 100)
+$swill: #EAD637;
+$plausible: #EEA243;
+$genius: #5FAD56;
 
 $hind: 'Hind Madurai', sans-serif;
 
@@ -12,42 +15,142 @@ body {
   padding: 0;
   margin: 0;
   font-family: $hind;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
+// NAV & SEARCH //
 nav {
   background-color: $muted;
+  h1 {
+    font-size: 1em;
+    margin: 0;
+    padding: 10px;
+    float: left;
+  }
+  p {
+    margin:  0;
+    padding: 10px;
+    float: left;
+    cursor: pointer;
+    background-color: $success;
+    &:hover {
+      background-color: $genius;
+    }
+  }
+}
+
+nav:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+#search {
+  float: right;
+  width: 45vw;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.nav-container {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+#idea-form {
+  display: none;
+  margin: 10px 0;
+  width: 90vw;
+  margin: auto;
+  background-color: $warning;
+  padding: 20px;
 }
 
 input {
   font-size: 1em;
 }
 
+#idea-title, #idea-body {
+  width: 89vw;
+  margin-bottom: 10px;
+}
+
+#idea-body {
+  font-size: 1em;
+}
+
 #idea-submit {
   color: white;
   background-color: $success;
-  outline: 0;
   padding: 10px;
   cursor: pointer;
+  text-align: center;
 }
 
-.delete-button {
+
+// IDEAS //
+.title-input {
+  padding: 10px;
+  font-weight: 700;
+}
+
+.body-input {
+  padding: 10px;
+}
+
+.idea {
+  background-color: $muted;
+  width: 90vw;
+  margin: 40px auto;
+}
+
+.idea:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.quality {
+  padding: 10px 13px;
+}
+
+.idea-buttons {
+  float: right;
+  width: 15vw;
   color: white;
-  background-color: $warning;
   padding: 10px;
   cursor: pointer;
+  text-align: center;
+}
+
+
+.delete-button {
+  @extend .idea-buttons;
+  background-color: $warning;
 }
 
 .upgrade-button {
-  color: white;
+  @extend .idea-buttons;
   background-color: $success;
-  padding: 10px;
-  cursor: pointer;
 }
 
 .downgrade-button {
-  color: white;
+  @extend .idea-buttons;
   background-color: $warning;
-  padding: 10px;
-  cursor: pointer;
+}
+
+.swill {
+  background-color: $swill;
+}
+
+.plausible {
+  background-color: $plausible;
+}
+
+.genius {
+  background-color: $genius;
 }

@@ -17,11 +17,11 @@ function formatIdeas(ideas) {
 
         "<div class='title-input' id='title-"+ id +"'>" + title + "</div>" +
         "<div class='body-input' id='body-"+ id +"'>" + body + "</div>" +
-        "<div id='quality-"+ id +"'>" + quality + "</div>" +
 
         "<div class='delete-button' id='delete-" + id  + "'>delete</div>" +
         "<div class='upgrade-button' id='upgrade-" + id  + "'>thumbs up</div>" +
         "<div class='downgrade-button' id='downgrade-" + id  + "'>thumbs down</div>" +
+        "<div class='quality "+ quality + "' id='quality-"+ id +"'>" + quality + "</div>" +
 
       "</div>";
   }
