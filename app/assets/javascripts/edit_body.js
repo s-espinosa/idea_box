@@ -4,7 +4,7 @@ function bodyInputs(){
   });
 
   $("main").on("blur", ".body-input", function(){
-    this.setAttribute('readonly', 'readonly');
+    this.setAttribute('contenteditable', 'false');
     var body = this.textContent;
     var id = this.id.slice(5);
     editBody(id, body);
