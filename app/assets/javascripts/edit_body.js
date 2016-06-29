@@ -1,7 +1,6 @@
 function bodyInputs(){
   $("main").on("click", ".body-input", function(){
     this.setAttribute('contenteditable', 'true');
-    console.log("clicked!");
   });
 
   $("main").on("blur", ".body-input", function(){

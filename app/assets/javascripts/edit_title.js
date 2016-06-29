@@ -1,7 +1,6 @@
 function titleInputs(){
   $("main").on("click", ".title-input", function(){
     this.setAttribute('contenteditable', 'true');
-    console.log("clicked!");
   });
 
   $("main").on("blur", ".title-input", function(){
