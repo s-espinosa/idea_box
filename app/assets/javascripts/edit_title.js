@@ -22,7 +22,6 @@ function titleInputs(){
   });
 }
 
-
 function editTitle(id, title) {
   var params = {title: title};
   $.ajax({
