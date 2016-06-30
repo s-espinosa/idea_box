@@ -7,8 +7,8 @@ RSpec.describe 'When a user visits root' do
     visit '/'
 
     wait_for_ajax
-    expect(page).to have_content(idea1["title"])
-    expect(page).to have_content(idea2["description"])
+    expect(page).to have_content(idea1.title)
+    expect(page).to have_content(idea2.body)
     expect(page).to have_content("swill")
   end
 end
