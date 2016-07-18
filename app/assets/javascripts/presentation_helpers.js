@@ -19,8 +19,8 @@ function formatIdeas(ideas) {
         "<div class='body-input' id='body-"+ id +"'>" + body + "</div>" +
 
         "<div class='delete-button' id='delete-" + id  + "'>delete</div>" +
-        "<div class='upgrade-button' id='upgrade-" + id  + "'>thumbs up</div>" +
-        "<div class='downgrade-button' id='downgrade-" + id  + "'>thumbs down</div>" +
+        "<div class='rate upgrade' id='up-" + id  + "'>thumbs up</div>" +
+        "<div class='rate downgrade' id='dn-" + id  + "'>thumbs down</div>" +
         "<div class='quality "+ quality + "' id='quality-"+ id +"'>" + quality + "</div>" +
 
       "</div>";

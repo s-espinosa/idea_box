@@ -133,12 +133,12 @@ input {
   background-color: $warning;
 }
 
-.upgrade-button {
+.upgrade {
   @extend .idea-buttons;
   background-color: $success;
 }
 
-.downgrade-button {
+.downgrade {
   @extend .idea-buttons;
   background-color: $warning;
 }

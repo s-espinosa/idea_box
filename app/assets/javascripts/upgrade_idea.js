@@ -1,8 +1,25 @@
 function upgradeButtons(){
-  $("main").on("click", ".upgrade-button", function(){
-    var ideaIdNumber = this.id.slice(8);
-    upgradeIdea(ideaIdNumber);
+  $("main").on("click", ".rate", function(){
+    var ideaData = this.id.split("-");
+
+    switch(ideaData[0]) {
+      case "up":
+        upgradeIdea(ideaData[1]);
+        break;
+      case "dn":
+        downgradeIdea(ideaData[1]);
+        break;
+    }
   });
+}
+
+function downgradeIdea(id){
+  currentQuality = $(qualitySelector(id)).text();
+  if (currentQuality === "genius") {
+    patchIdea(id, {quality: "plausible"});
+  } else if (currentQuality === "plausible"){
+    patchIdea(id, {quality: "swill"});
+  }
 }
 
 function upgradeIdea(id){
