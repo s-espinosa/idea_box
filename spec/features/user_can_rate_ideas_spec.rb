@@ -7,7 +7,7 @@ RSpec.describe 'When a user rates an idea' do
     visit '/'
     wait_for_ajax
     within("#idea-#{idea1.id}") do
-      find(".upgrade-button").click
+      find("#up-#{idea1.id}").click
     end
 
     within("#idea-#{idea1.id}") do
@@ -22,7 +22,7 @@ RSpec.describe 'When a user rates an idea' do
     visit '/'
     wait_for_ajax
     within("#idea-#{idea1.id}") do
-      find(".downgrade-button").click
+      find("#dn-#{idea1.id}").click
     end
 
     within("#idea-#{idea1.id}") do
@@ -38,10 +38,10 @@ RSpec.describe 'When a user rates an idea' do
     visit '/'
     wait_for_ajax
     within("#idea-#{idea1.id}") do
-      find(".upgrade-button").click
+      find("#up-#{idea1.id}").click
     end
     within("#idea-#{idea2.id}") do
-      find(".downgrade-button").click
+      find("#dn-#{idea2.id}").click
     end
 
     within("#idea-#{idea1.id}") do
